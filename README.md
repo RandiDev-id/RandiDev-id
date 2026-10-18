@@ -1,17 +1,34 @@
-# 👋 Halo, Gua RandiDev!
+<div align="center">
+  
+  <!-- Banner Keren Otomatis -->
+  <img src="https://vercel.app" width="100%" />
 
-Seorang Developer & Kreator Digital asal Indonesia yang fokus membangun solusi teknologi inovatif dan suka ngulik kode. 💻🚀
+  <!-- Tulisan Animasi Bergerak -->
+  <h1>👋 Halo Semua, Gua Randi!</h1>
+  <img src="https://herokuapp.com" alt="Typing SVG" />
+
+</div>
 
 ---
 
 ### 🚀 Tentang Gua:
-- 🔭 **Sedang Fokus**: Belajar coding dan mengembangkan project aplikasi keren.
-- 💬 **Tanya Gua Tentang**: Pemrograman, perkembangan teknologi, atau kolaborasi *open-source*.
+- 🔭 **Sedang Fokus**: Mengasah skill programming dan membangun berbagai proyek digital.
+- 💬 **Tanya Gua Tentang**: Coding, perkembangan teknologi terkini, atau kolaborasi *open-source*.
 - 📫 **Kontak Gua**: randidev72@gmail.com
 
 ### 🛠️ Tech Stack & Skills:
-- **Languages:** HTML, CSS, JavaScript 
-- **Tools:** Git, GitHub, VS Code
+- **Languages:** HTML, CSS, JavaScript, Python
+- **Tools & Platforms:** Git, GitHub, VS Code
 
 ---
-*Follow profil gua dan mari kita bangun kolaborasi project yang seru!* ✨
+
+### 📊 GitHub Stats (Bakal Update Otomatis!):
+<div align="center">
+  <img src="https://vercel.app" alt="Statistik GitHub Randi" width="48%" />
+  <img src="https://herokuapp.com" alt="Streak Coding Randi" width="48%" />
+</div>
+
+<br/>
+<div align="center">
+  <img src="https://komarev.com" alt="Visitor Count" />
+</div>
