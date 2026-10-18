@@ -10,7 +10,7 @@ Seorang Developer & Kreator Digital asal Indonesia yang fokus membangun solusi t
 - 📫 **Kontak Gua**: randidev72@gmail.com
 
 ### 🛠️ Tech Stack & Skills:
-- **Languages:** HTML, CSS, JavaScript (Bisa lu sesuaikan nanti)
+- **Languages:** HTML, CSS, JavaScript 
 - **Tools:** Git, GitHub, VS Code
 
 ---
