@@ -1,16 +1,17 @@
-## Hi there 👋
+# 👋 Halo, Gua RandiDev!
 
-<!--
-**RandiDev-id/RandiDev-id** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Seorang Developer & Kreator Digital asal Indonesia yang fokus membangun solusi teknologi inovatif dan suka ngulik kode. 💻🚀
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🚀 Tentang Gua:
+- 🔭 **Sedang Fokus**: Belajar coding dan mengembangkan project aplikasi keren.
+- 💬 **Tanya Gua Tentang**: Pemrograman, perkembangan teknologi, atau kolaborasi *open-source*.
+- 📫 **Kontak Gua**: randidev72@gmail.com
+
+### 🛠️ Tech Stack & Skills:
+- **Languages:** HTML, CSS, JavaScript (Bisa lu sesuaikan nanti)
+- **Tools:** Git, GitHub, VS Code
+
+---
+*Follow profil gua dan mari kita bangun kolaborasi project yang seru!* ✨
