@@ -1,13 +1,6 @@
-<div align="center">
-  
-  <!-- Banner Keren Otomatis -->
-  <img src="https://vercel.app" width="100%" />
+# 👋 Halo Semua, Gua RandiDev!
 
-  <!-- Tulisan Animasi Bergerak -->
-  <h1>👋 Halo Semua, Gua Randi!</h1>
-  <img src="https://herokuapp.com" alt="Typing SVG" />
-
-</div>
+Seorang **Software Developer in Progress** & **Tech Enthusiast** asal Indonesia yang suka ngulik kode dan membangun solusi digital. 💻🚀
 
 ---
 
@@ -22,13 +15,9 @@
 
 ---
 
-### 📊 GitHub Stats (Bakal Update Otomatis!):
-<div align="center">
-  <img src="https://vercel.app" alt="Statistik GitHub Randi" width="48%" />
-  <img src="https://herokuapp.com" alt="Streak Coding Randi" width="48%" />
-</div>
+### ⚡ Aktivitas & Kontribusi:
+Berikut adalah grafik kontribusi kode gua di GitHub tahun ini:
 
-<br/>
-<div align="center">
-  <img src="https://komarev.com" alt="Visitor Count" />
-</div>
+![Kontribusi GitHub Lu](https://rshah.org)
+
+*(Grafik hijau di atas bakal otomatis terisi makin penuh kalau lu makin rajin bikin project atau upload kode!)*
