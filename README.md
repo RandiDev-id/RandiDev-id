@@ -9,15 +9,18 @@ Seorang **Software Developer in Progress** & **Tech Enthusiast** asal Indonesia 
 - 💬 **Tanya Gua Tentang**: Coding, perkembangan teknologi terkini, atau kolaborasi *open-source*.
 - 📫 **Kontak Gua**: randidev72@gmail.com
 
+---
+
 ### 🛠️ Tech Stack & Skills:
-- **Languages:** HTML, CSS, JavaScript, Python
-- **Tools & Platforms:** Git, GitHub, VS Code
+
+| Bidang | Teknologi & Tools |
+| :--- | :--- |
+| **Languages** | `HTML`, `CSS`, `JavaScript`, `Python` |
+| **Tools & Platforms** | `Git`, `GitHub`, `VS Code` |
 
 ---
 
-### ⚡ Aktivitas & Kontribusi:
-Berikut adalah grafik kontribusi kode gua di GitHub tahun ini:
-
-![Kontribusi GitHub Lu](https://rshah.org)
-
-*(Grafik hijau di atas bakal otomatis terisi makin penuh kalau lu makin rajin bikin project atau upload kode!)*
+### 📈 Target & Misi Tahun Ini:
+- [ ] Membuat website portofolio pribadi pertama.
+- [ ] Mempelajari framework baru untuk pengembangan aplikasi.
+- [ ] Berkontribusi dalam proyek open-source publik.
