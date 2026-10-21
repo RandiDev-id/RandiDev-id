@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portofolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Syne:wght@800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06050c;--tx:#ece9ff;--mu:#8d88b0;--pk:#ff3d9a;--cy:#19e3ff;--vi:#7c4dff;--gl:rgba(255,255,255,.05);--bd:rgba(255,255,255,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font:16px/1.6 'Space Grotesk',system-ui,sans-serif;overflow-x:hidden}
+body:not(.on){overflow:hidden}
+a{color:inherit;text-decoration:none}
+#bg{position:fixed;inset:0;z-index:-1}
+#glow{position:fixed;width:380px;height:380px;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(124,77,255,.22),transparent 65%);transform:translate(-50%,-50%);left:-999px;top:-999px}
+.wrap{max-width:1100px;margin:auto;padding:0 22px}
+section{padding:90px 0}
+h2{font:800 clamp(2rem,6vw,3.6rem)/1 Syne,sans-serif;margin-bottom:34px}
+.gl{position:relative}
+.gl::before,.gl::after{content:attr(data-t);position:absolute;left:0;top:0;width:100%;height:100%;mix-blend-mode:screen}
+.gl::before{color:var(--pk);animation:g1 2.6s infinite steps(1)}
+.gl::after{color:var(--cy);animation:g2 2.6s infinite steps(1)}
+@keyframes g1{0%,88%,100%{clip-path:inset(0 0 100% 0)}90%{clip-path:inset(20% 0 55% 0);transform:translate(-6px)}94%{clip-path:inset(65% 0 10% 0);transform:translate(6px)}}
+@keyframes g2{0%,86%,100%{clip-path:inset(0 0 100% 0)}88%{clip-path:inset(50% 0 30% 0);transform:translate(7px)}93%{clip-path:inset(10% 0 70% 0);transform:translate(-7px)}}
+/* gate */
+#gate{position:fixed;inset:0;z-index:99;background:#06050c;display:grid;place-content:center;text-align:center;gap:22px;padding:20px;clip-path:circle(150% at 50% 50%);transition:clip-path 1s cubic-bezier(.7,0,.2,1)}
+.on #gate{clip-path:circle(0% at 50% 50%);pointer-events:none}
+.gt{font:800 clamp(2.6rem,12vw,6rem)/1 Syne,sans-serif}
+#boot span{display:block;color:var(--cy);font:14px monospace;opacity:0;animation:fi .4s forwards}
+#boot span:nth-child(2){animation-delay:.6s}#boot span:nth-child(3){animation-delay:1.2s}
+@keyframes fi{to{opacity:1}}
+#go{justify-self:center;border:0;padding:16px 30px;font:600 1rem 'Space Grotesk';color:#fff;border-radius:99px;cursor:pointer;background:linear-gradient(90deg,var(--pk),var(--vi),var(--cy));background-size:200%;animation:sh 3s linear infinite,pu 1.6s ease-in-out infinite}
+@keyframes sh{to{background-position:200%}}
+@keyframes pu{50%{transform:scale(1.07);box-shadow:0 0 40px var(--pk)}}
+/* nav */
+nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:50;width:min(94%,760px);display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 18px;border-radius:99px;background:rgba(10,8,20,.6);backdrop-filter:blur(14px);border:1px solid var(--bd)}
+nav b{font:800 1.1rem Syne}
+nav div{display:flex;gap:20px;font-size:.92rem;color:var(--mu)}
+nav div a:hover{color:var(--cy)}
+.mb{display:flex;align-items:flex-end;gap:3px;height:22px;width:34px;background:none;border:0;cursor:pointer}
+.mb i{flex:1;background:var(--pk);border-radius:2px;animation:bar .9s ease-in-out infinite alternate}
+.mb i:nth-child(2){animation-delay:.2s;background:var(--vi)}.mb i:nth-child(3){animation-delay:.4s;background:var(--cy)}.mb i:nth-child(4){animation-delay:.1s}
+.mb.off i{animation-play-state:paused;height:3px!important;opacity:.4}
+@keyframes bar{from{height:15%}to{height:100%}}
+@media(max-width:700px){nav div{display:none}}
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:40px;padding-top:110px}
+.h{opacity:0;transform:translateY(30px)}
+.on .h{opacity:1;transform:none;transition:.8s calc(var(--i)*.13s + .7s)}
+.hi{color:var(--cy);font-family:monospace}
+h1{font:800 clamp(3rem,9.5vw,7rem)/.95 Syne,sans-serif;margin:10px 0 18px;word-break:break-word}
+.rl{font-size:clamp(1.1rem,3vw,1.6rem);min-height:2.2em}
+.rl em{font-style:normal;background:linear-gradient(90deg,var(--pk),var(--cy));-webkit-background-clip:text;color:transparent}
+.rl::after{content:'|';color:var(--pk);animation:fi .5s infinite alternate}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.bt{padding:13px 24px;border-radius:99px;border:1px solid var(--bd);font-weight:600;transition:.25s}
+.bt.p{background:linear-gradient(90deg,var(--pk),var(--vi));border:0}
+.bt:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(255,61,154,.35)}
+/* photo */
+.ph{position:relative;width:min(100%,360px);aspect-ratio:4/5;margin:auto;transition:transform .15s}
+.ph::before{content:'';position:absolute;inset:-6px;border-radius:34px;background:conic-gradient(from 0deg,var(--pk),var(--vi),var(--cy),var(--pk));animation:rot 5s linear infinite;filter:blur(8px)}
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes rot{to{transform:rotate(360deg)}}
+.pf{position:absolute;inset:0;border-radius:28px;overflow:hidden;background:#120d24;cursor:pointer}
+.pf img,.pf canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pf img{transition:filter 1s}
+.pf canvas{opacity:0;transition:opacity .5s}
+.pf::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--pk),var(--vi),var(--cy));mix-blend-mode:color;opacity:0;transition:opacity 1s}
+[data-m="1"] img{animation:gp .7s infinite}
+@keyframes gp{0%,78%,100%{filter:drop-shadow(5px 0 var(--pk)) drop-shadow(-5px 0 var(--cy));clip-path:none}80%{clip-path:inset(30% 0 50% 0);transform:translateX(12px)}85%{clip-path:inset(62% 0 8% 0);transform:translateX(-12px)}90%{clip-path:none;transform:none}}
+[data-m="2"] img{filter:grayscale(1) contrast(1.35)}
+[data-m="2"] .pf::after{opacity:1}
+[data-m="3"] canvas,[data-m="4"] canvas{opacity:1}
+.tag{position:absolute;left:12px;bottom:12px;z-index:3;font:12px monospace;padding:5px 10px;border-radius:99px;background:rgba(0,0,0,.65);color:var(--cy);backdrop-filter:blur(6px)}
+/* about */
+.ab{display:grid;grid-template-columns:1.3fr 1fr;gap:30px}
+.box{background:var(--gl);border:1px solid var(--bd);border-radius:22px;padding:26px}
+.term{font:14px/1.8 monospace;color:#b9ffd9}.term span{color:var(--pk)}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px;text-align:center}
+.st b{display:block;font:800 2.2rem Syne;color:var(--cy)}
+.st small{color:var(--mu)}
+/* marquee */
+.mq{overflow:hidden;border-block:1px solid var(--bd);padding:16px 0;transform:rotate(-1.5deg);background:rgba(124,77,255,.1)}
+.mq div{display:flex;gap:40px;width:max-content;animation:mv 22s linear infinite;font:800 2rem Syne;white-space:nowrap}
+.mq span:nth-child(even){color:transparent;-webkit-text-stroke:1px var(--pk)}
+@keyframes mv{to{transform:translateX(-50%)}}
+/* skills + projects */
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chips span{padding:10px 20px;border-radius:99px;border:1px solid var(--bd);background:var(--gl);transition:.25s}
+.chips span:hover{background:var(--vi);transform:translateY(-4px) rotate(-3deg);box-shadow:0 0 25px var(--vi)}
+.big{font:800 clamp(2.4rem,8vw,5.5rem)/1 Syne;margin-bottom:28px}
+.big em{font-style:normal;background:linear-gradient(90deg,var(--pk),var(--cy));-webkit-background-clip:text;color:transparent}
+footer{text-align:center;color:var(--mu);padding:40px 0;font-size:.9rem}
+.rv{opacity:0;transform:translateY(40px);transition:.8s}.rv.in{opacity:1;transform:none}
+@media(max-width:800px){.hero,.ab{grid-template-columns:1fr}.ph{order:-1;width:min(70%,300px)}.hero{padding-top:100px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas><div id="glow"></div>
+
+<div id="gate">
+  <div class="gt gl" data-t="WELCOME">WELCOME</div>
+  <div id="boot"><span>&gt; memuat portofolio...</span><span>&gt; musik siap diputar</span><span>&gt; tekan tombol buat masuk</span></div>
+  <button id="go">▶ MASUK &amp; NYALAIN MUSIK</button>
+</div>
+
+<nav><b>&lt;/&gt;</b><div><a href="#about">Tentang</a><a href="#skill">Skill</a><a href="#kontak">Kontak</a></div><button class="mb" id="mb" aria-label="Musik"><i></i><i></i><i></i><i></i></button></nav>
+
+<div class="wrap hero">
+  <div>
+    <p class="hi h" style="--i:0">&gt; halo world, gue</p>
+    <h1 class="gl h" style="--i:1" id="nm"></h1>
+    <p class="rl h" style="--i:2">Gue seorang <em id="role"></em></p>
+    <p class="h" style="--i:3;color:var(--mu)" id="sk"></p>
+    <div class="btns h" style="--i:4"><a class="bt p" href="#skill">Lihat Skill</a><a class="bt" href="#kontak">Ajak Kolaborasi</a></div>
+  </div>
+  <div class="ph h" style="--i:2" id="ph" data-m="0">
+    <div class="pf" id="pf"><img id="foto" src="randal.jpg" alt="Foto"><canvas id="fx" width="360" height="450"></canvas><span class="tag" id="tag">NORMAL</span></div>
+  </div>
+</div>
+
+<div class="mq"><div id="mq"></div></div>
+
+<section id="about"><div class="wrap rv">
+  <h2>Tentang Gue</h2>
+  <div class="ab">
+    <div class="box term" id="term"></div>
+    <div class="box"><p id="abt"></p><div class="st" id="st"></div></div>
+  </div>
+</div></section>
+
+<section id="skill"><div class="wrap rv"><h2>Skill</h2><div class="chips" id="chips"></div></div></section>
+
+<section id="kontak"><div class="wrap rv">
+  <p class="big">Yuk bikin sesuatu <em>gila</em> bareng.</p>
+  <div class="btns" id="soc"></div>
+</div></section>
+<footer id="ft"></footer>
+
+<script>
+/* ====== EDIT DI SINI AJA ====== */
+const CFG={
+  nama:'RANDALLYSCE',
+  sekolah:'SMK  • Teknik Komputer dan Jaringan (TKJ)',
+  roles:['Siswa TKJ','Network Engineer','Linux Enthusiast','Calon SysAdmin'],
+  about:'Gue siswa TKJ yang suka ngoprek jaringan, server, dan Linux. Lagi belajar terus biar nanti jadi network engineer yang jago.',
+  skills:['Mikrotik','Cisco','Linux','VLAN','Debian','Proxmox','Windows Server','Cabling','Troubleshooting'],
+  stats:[[12,'Lab praktik'],[3,'Tahun ngoding'],[99,'Cangkir kopi']],
+  soc:[['WhatsApp','https://wa.me/6285793734820'],['Instagram','https://instagram.com/Randall'],['GitHub','https://github.com/RandiDev-id'],['Email','mailto:randidev72.com']],
+  musik:'music.mp3' /* taruh file musik di folder yg sama. Kalau nggak ada, otomatis pake musik synthwave bawaan */
+};
+/* ============================== */
+const $=s=>document.querySelector(s);
+$('#nm').textContent=CFG.nama;$('#nm').dataset.t=CFG.nama;$('#sk').textContent=CFG.sekolah;$('#abt').textContent=CFG.about;
+$('#term').innerHTML=`<span>$</span> whoami<br>${CFG.nama.toLowerCase()}<br><span>$</span> cat sekolah.txt<br>${CFG.sekolah}<br><span>$</span> status<br>lagi nge-build masa depan_`;
+$('#chips').innerHTML=CFG.skills.map(s=>`<span>${s}</span>`).join('');
+$('#mq').innerHTML=(CFG.skills.map(s=>`<span>${s}</span><span>${s}</span>`).join('')).repeat(2);
+$('#st').innerHTML=CFG.stats.map(s=>`<div><b data-n="${s[0]}">0</b><small>${s[1]}</small></div>`).join('');
+$('#soc').innerHTML=CFG.soc.map((s,i)=>`<a class="bt ${i?'':'p'}" href="${s[1]}" target="_blank">${s[0]}</a>`).join('');
+$('#ft').textContent='© '+new Date().getFullYear()+' '+CFG.nama+' — dibuat pake Acode';
+
+/* ---- musik ---- */
+let M0=null;const audio=new Audio(CFG.musik);audio.loop=true;audio.volume=.7;
+function synth(){
+  const ac=new(window.AudioContext||window.webkitAudioContext)(),mg=ac.createGain();mg.gain.value=.3;mg.connect(ac.destination);
+  const nb=ac.createBuffer(1,ac.sampleRate/4,ac.sampleRate),nd=nb.getChannelData(0);for(let i=0;i<nd.length;i++)nd[i]=Math.random()*2-1;
+  const f=n=>440*Math.pow(2,(n-69)/12),pr=[[57,60,64],[53,57,60],[48,52,55],[55,59,62]],sp=60/108/4;
+  function tn(t,n,d,ty,v,c){const o=ac.createOscillator(),g=ac.createGain(),l=ac.createBiquadFilter();o.type=ty;o.frequency.value=f(n);l.type='lowpass';l.frequency.value=c;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.02);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(l);l.connect(g);g.connect(mg);o.start(t);o.stop(t+d+.05)}
+  function kick(t){const o=ac.createOscillator(),g=ac.createGain();o.frequency.setValueAtTime(160,t);o.frequency.exponentialRampToValueAtTime(40,t+.15);g.gain.setValueAtTime(.9,t);g.gain.exponentialRampToValueAtTime(.001,t+.25);o.connect(g);g.connect(mg);o.start(t);o.stop(t+.3)}
+  function hat(t){const s=ac.createBufferSource(),g=ac.createGain(),h=ac.createBiquadFilter();s.buffer=nb;h.type='highpass';h.frequency.value=7000;g.gain.setValueAtTime(.25,t);g.gain.exponentialRampToValueAtTime(.001,t+.06);s.connect(h);h.connect(g);g.connect(mg);s.start(t)}
+  let st=0,nx=ac.currentTime+.1;
+  setInterval(()=>{while(nx<ac.currentTime+.2){const c=pr[(st>>4)%4],k=st%16;
+    if(k==0)c.forEach(n=>tn(nx,n,sp*15,'sawtooth',.06,900));
+    if(k%4==0){kick(nx);tn(nx,c[0]-24,sp*3,'square',.22,400)}
+    if(k%4==2)hat(nx);
+    tn(nx,c[k%3]+12+(k%8>3?12:0),sp*1.6,'sawtooth',.07,2600);
+    st++;nx+=sp}},30);
+  return{p:()=>ac.resume(),s:()=>ac.suspend()}
+}
+async function startMusic(){try{await audio.play();M0={p:()=>audio.play(),s:()=>audio.pause()}}catch(e){M0=synth()}}
+$('#go').onclick=()=>{document.body.classList.add('on');startMusic();countUp()};
+$('#mb').onclick=e=>{if(!M0)return;const b=e.currentTarget,off=b.classList.toggle('off');off?M0.s():M0.p()};
+
+/* ---- foto transisi ---- */
+const ph=$('#ph'),im=$('#foto'),cv=$('#fx'),cx=cv.getContext('2d'),MD=['NORMAL','GLITCH','NEON','PIXEL','MATRIX'];
+im.onerror=()=>{im.onerror=null;im.src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 450'%3E%3Crect width='360' height='450' fill='%231a1033'/%3E%3Ccircle cx='180' cy='170' r='70' fill='%237c4dff'/%3E%3Cpath d='M50 450c0-110 60-170 130-170s130 60 130 170z' fill='%23ff3d9a'/%3E%3C/svg%3E"};
+const cover=(c,w,h)=>{const s=Math.max(w/im.naturalWidth,h/im.naturalHeight),a=im.naturalWidth*s,b=im.naturalHeight*s;c.drawImage(im,(w-a)/2,(h-b)/2,a,b)};
+function pix(){let b=48;(function f(){if(ph.dataset.m!=3)return;const w=cv.width,h=cv.height,t=document.createElement('canvas');t.width=Math.ceil(w/b);t.height=Math.ceil(h/b);cover(t.getContext('2d'),t.width,t.height);cx.imageSmoothingEnabled=false;cx.clearRect(0,0,w,h);cx.drawImage(t,0,0,t.width,t.height,0,0,t.width*b,t.height*b);if(b>6.2){b*=.92;requestAnimationFrame(f)}})()}
+function asc(){try{const c=70,cw=cv.width/c,ch=cw*1.9,r=Math.floor(cv.height/ch),t=document.createElement('canvas');t.width=c;t.height=r;const g=t.getContext('2d');cover(g,c,r);const d=g.getImageData(0,0,c,r).data,S=' .:-=+*#%@';cx.fillStyle='#06050c';cx.fillRect(0,0,cv.width,cv.height);cx.font=cw/.6+'px monospace';cx.textBaseline='top';for(let y=0;y<r;y++)for(let x=0;x<c;x++){const i=(y*c+x)*4,l=(d[i]*.3+d[i+1]*.6+d[i+2]*.1)/255;cx.fillStyle=`hsl(${190+l*130},100%,${35+l*40}%)`;cx.fillText(S[Math.floor(l*9.99)],x*cw,y*ch)}}catch(e){ph.dataset.m=2;$('#tag').textContent='NEON'}}
+let m=0,iv;
+function setM(n){m=n;ph.dataset.m=n;$('#tag').textContent=MD[n];if(n==3)pix();if(n==4)asc()}
+function auto(){clearInterval(iv);iv=setInterval(()=>setM((m+1)%5),3800)}
+let started=0;const begin=()=>{if(started)return;started=1;auto()};
+im.addEventListener('load',begin);im.addEventListener('error',()=>setTimeout(begin,300));if(im.complete&&im.naturalWidth)begin();
+$('#pf').onclick=()=>{setM((m+1)%5);auto()};
+ph.onpointermove=e=>{const r=ph.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;ph.style.transform=`perspective(700px) rotateY(${x*18}deg) rotateX(${-y*18}deg)`};
+ph.onpointerleave=()=>ph.style.transform='';
+
+/* ---- background partikel + cursor ---- */
+const bc=$('#bg'),bx=bc.getContext('2d');let W,H,P=[],mx=-999,my=-999;
+function rs(){W=bc.width=innerWidth;H=bc.height=innerHeight;P=Array.from({length:Math.min(90,W/12|0)},()=>({x:Math.random()*W,y:Math.random()*H,vx:Math.random()-.5,vy:Math.random()-.5}))}
+function dr(){bx.clearRect(0,0,W,H);for(const p of P){p.x=(p.x+p.vx+W)%W;p.y=(p.y+p.vy+H)%H;bx.fillStyle='#19e3ff';bx.fillRect(p.x,p.y,2,2);for(const q of P){const d=Math.hypot(p.x-q.x,p.y-q.y);if(d<110){bx.strokeStyle=`rgba(124,77,255,${1-d/110})`;bx.beginPath();bx.moveTo(p.x,p.y);bx.lineTo(q.x,q.y);bx.stroke()}}const d=Math.hypot(p.x-mx,p.y-my);if(d<170){bx.strokeStyle=`rgba(255,61,154,${1-d/170})`;bx.beginPath();bx.moveTo(p.x,p.y);bx.lineTo(mx,my);bx.stroke()}}requestAnimationFrame(dr)}
+rs();dr();addEventListener('resize',rs);
+addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;const g=$('#glow');g.style.left=mx+'px';g.style.top=my+'px'});
+
+/* ---- typing, reveal, counter, card glow ---- */
+let ri=0,ci=0,dl=0;(function ty(){const w=CFG.roles[ri];ci+=dl?-1:1;$('#role').textContent=w.slice(0,ci);if(!dl&&ci==w.length){dl=1;return setTimeout(ty,1400)}if(dl&&ci==0){dl=0;ri=(ri+1)%CFG.roles.length}setTimeout(ty,dl?40:85)})();
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}}),{threshold:.15}).observe&&document.querySelectorAll('.rv').forEach(el=>new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){el.classList.add('in');o.disconnect()}},{threshold:.12}).observe(el));
+function countUp(){document.querySelectorAll('[data-n]').forEach(el=>{const n=+el.dataset.n;let v=0;const t=setInterval(()=>{v+=Math.ceil(n/40);if(v>=n){v=n;clearInterval(t)}el.textContent=v},40)})}
+</script>
+</body>
+</html>
